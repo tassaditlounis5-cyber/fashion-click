@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Boutique - Produits</title>
+  <link rel="stylesheet" href="pageproduit.css">  <!-- Lien vers le CSS externe -->
+  <script src="pageproduit.js" defer></script> <!-- Lien vers le JS externe -->
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <!-- doublon <header> désactivé -->
+        <!-- Logo -->
+        <a href="#" class="logo">
+          <img src="FASHION.png" alt="Logo du magasin" width="150" height="100">
+        </a>
+    
+        <!-- Menu de navigation -->
+        <ul class="navmenu"> 
+          <li><a href="pageaccueil.html">Accueil</a></li>
+          <li><a href="pageauthentification.html">Authentification </a></li>
+          <li><a href="pageinscription.html">inscription </a></li>
+          <li><a href="pageaccueil.html#boutique">Boutique</a></li>
+          <li><a href="pageaccueil.html#trending">Produits</a></li> 
+          <li><a href="pagepromotion.html">Nos promotions</a></li>  
+          <li><a href="pagecommande.html">passer la commande </a></li> 
+        </ul>
+        
+        <!-- Icônes de navigation -->
+        <div class="nav-icon">
+          <a href="#"><i class='bx bx-search'></i></a>
+          <a href="#"><i class='bx bx-user'></i></a>
+          <a href="#"><i class='bx bx-cart'></i></a>
+    
+          <!-- Icône du menu -->
+          <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+      </header>
+      <div class="container">
+        <h1>Bienvenue dans notre Boutique</h1>
+        <div class="categories">
+            <div class="category" onclick="showCategory('homme')">
+                <h2>Homme</h2>
+            </div>
+            <div class="category" onclick="showCategory('femme')">
+                <h2>Femme</h2>
+            </div>
+            <div class="category" onclick="showCategory('enfant')">
+                <h2>Enfants</h2>
+            </div>
+        </div>
+    
+        <!-- Produits de la catégorie sélectionnée -->
+        <div id="products" class="products">
+            <!-- Les produits seront insérés ici via JavaScript -->
+        </div>
+    </div>
+    
+    <!-- Panier -->
+    <div id="cart-popup" class="cart-popup">
+        <h2>Mon Panier</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: <span id="cart-total">€0.00</span></p>
+        <button onclick="checkout()">Valider la commande</button>
+        <button onclick="clearCart()">Vider le panier</button>
+    </div>
+    
+    <!-- <script src="script.js"></script> (fichier inexistant, désactivé) -->
+    </body>
+    </html>

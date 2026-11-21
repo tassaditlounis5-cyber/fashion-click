@@ -1,0 +1,27 @@
+SITE WEB CORRIGE - FASHION CLICK
+=================================
+COMMENT UTILISER
+1. Copiez tous ces fichiers dans votre dossier "site web" (celui qui contient deja vos images).
+2. Windows demande de remplacer les fichiers : choisissez "Remplacer".
+3. Ouvrez index.html avec Chrome.
+(Ce ZIP ne contient pas les images : gardez les votres dans le dossier.)
+
+CE QUI A ETE CORRIGE (rien n'a ete supprime : seules les lignes fautives ont ete modifiees)
+- pageaccueil.css : NOUVEAU fichier (votre ancien page_accueil.css etait vide, 0 octet).
+- pageaccueil.html : lien CSS "pageacceuil.css" -> "pageaccueil.css".
+- pageaccueil.js : "ccnst" -> "const" et accolade manquante ajoutee.
+- index.html : NOUVEAU, redirige vers pageaccueil.html (utile pour GitHub Pages).
+- pagepromotion.html : charge maintenant pagepromotion.js + zone d'avis ajoutee.
+- pagepromotion.js : le compteur du panier fonctionne sur les boutons.
+- pagecommande.html : id en double corrige (quantity4), noms et prix des boutons corriges.
+- pagecommande.js : nouvelle version corrigee ; l'ancienne est gardee en commentaire.
+- pageproduit.html/.js : script.js inexistant desactive, double <header> desactive,
+  liens du menu corriges, fonctions checkout/clearCart ajoutees, panier cliquable.
+- Toutes les pages : icones (Boxicons) ajoutees.
+- Formulaires : message de demonstration au lieu d'un envoi POST
+  (GitHub Pages n'a pas de serveur, un POST provoquerait une erreur).
+
+A VERIFIER PAR VOUS
+- Les noms d'images avec espaces/majuscules (ex: "survette enfant.jfif") : renommez-les sans espaces.
+- pageproduit.js utilise image1.jpg a image24.jpg : verifiez qu'elles existent.
+- Le bas de la page d'accueil contient des textes de modele (Lorem ipsum, "Saidul Islam") : a remplacer.

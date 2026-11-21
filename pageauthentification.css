@@ -1,0 +1,143 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Jost', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Style de l'en-tête */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 60px;
+}
+
+header .logo img {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+header .logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Menu de navigation */
+.navmenu {
+    display: flex;
+    gap: 25px;
+}
+
+.navmenu li a {
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 15px;
+    text-transform: capitalize;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navmenu li a:hover {
+    background-color: #dc28a9;
+    color: #ffffff;
+}
+
+/* Conteneur du formulaire */
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd;
+}
+
+/* Titre du formulaire */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Groupe de champs de formulaire */
+.form-group {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Label des champs de formulaire */
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Champs de texte, email, mot de passe */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Bouton d'envoi */
+button {
+    background-color: #dc28a9;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #b02087;
+}
+
+/* Styles de lien */
+a {
+    color: #dc28a9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Alignement du formulaire */
+body {
+    display: flex;
+    justify-content: center;  /* Centre le formulaire horizontalement */
+    align-items: center;      /* Centre le formulaire verticalement */
+    min-height: 100vh;         /* Prend toute la hauteur de la fenêtre */
+    flex-direction: column;
+    padding: 0 20px;
+}

@@ -1,0 +1,289 @@
+/* Réinitialisation et configuration de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Jost', sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Corps de la page */
+body {
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* En-tête */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Logo */
+header .logo img {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+header .logo img:hover {
+  transform: scale(1.1);
+}
+#cart-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #333;
+  font-size: 24px;
+}
+
+#cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: #dc28a9;
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* Navigation */
+.navmenu {
+  display: flex;
+  gap: 20px;
+}
+
+.navmenu li a {
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 15px;
+  text-transform: capitalize;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navmenu li a:hover {
+  background-color: #dc28a9;
+  color: #ffffff;
+}
+
+/* Bannière */
+.banner {
+  text-align: center;
+  margin-top: 100px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+}
+
+.banner h1 {
+  font-size: 28px;
+  color: #dc28a9;
+}
+
+.banner p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Section des promotions */
+.promo-code-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.promo-code-section input {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.promo-code-section button {
+  background-color: #dc28a9; /* Bouton en rose */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.promo-code-section button:hover {
+  background-color: #b02087;
+}
+
+/* Grille des produits */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Carte produit */
+.product {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.product img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.product .old-price {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.product .new-price {
+  font-weight: bold;
+  color: #dc28a9;
+}
+
+/* Bouton Ajouter au panier */
+.product button {
+  background-color: #f8a1c7; /* Rose plus doux */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;  /* Bordures légèrement arrondies pour un look plus moderne et épuré */
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Ombre légère pour donner un effet flottant */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: none;  /* Pas de majuscules pour garder une touche plus élégante */
+}
+
+.product button:hover {
+  background-color: #ec6998;  /* Un rose légèrement plus foncé pour l'effet au survol */
+  transform: translateY(-3px);  /* Effet de levée au survol */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);  /* Ombre plus marquée pour l'effet de survol */
+}
+
+.product button:focus {
+  outline: none; /* Retire le contour par défaut au focus */
+  border: 2px solid #f8a1c7; /* Ajoute une bordure rose autour du bouton pour le focus */
+}
+
+.product :hover {
+  background-color: #b02087;  /* Couleur plus foncée au survol */
+  transform: translateY(-2px);  /* Effet de déplacement léger pour un effet dynamique */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* Ombre plus marquée au survol */
+}
+
+.product i {
+  margin-right: 10px;  /* Espacement entre l'icône et le texte */
+  font-size: 18px;
+}
+
+.product:disabled {
+  background-color: #ddd;  /* Couleur de fond désactivé */
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Section Avis des Clients */
+.reviews-section {
+  margin-top: 50px; 
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.reviews-section h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.reviews-section textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+  font-size: 14px;
+}
+
+.reviews-section button {
+  margin-top: 15px;
+  background-color: #dc28a9;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reviews-section button:hover {
+  background-color: #b02087;
+}
+
+/* Offre de soldes */
+.sale-banner {
+  background-color: #ffefd5;
+  color: #dc28a9;
+  text-align: center;
+  padding: 15px 20px;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Pied de page */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  color: #333;
+  width: 100%;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>passer commande - Mini Site E-commerce</title>
+    <link rel="stylesheet" href="pagecommande.css">
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <img src="FASHION.png" alt="Logo du magasin" width="150" height="100">
+        </a>
+    
+        <!-- Menu de navigation -->
+        <ul class="navmenu"> 
+            <li><a href="pageaccueil.html">Accueil</a></li>
+            <li><a href="pageaccueil.html#boutique">Boutique</a></li>
+            <li><a href="pageaccueil.html#trending">Produits</a></li>
+            <li><a href="pagepromotion.html">promotions</a></li>
+            <li><a href="pagecommande.html">commander</a></li>
+            <li><a href="pageauthentification.html">Authentification </a></li>
+            <li><a href="pageinscription.html">inscription </a></li>
+        </ul>
+        
+        <div class="nav-icon">
+            <a href="#"><i class='bx bx-search'></i></a>
+            <a href="#"><i class='bx bx-user'></i></a>
+            <a href="#" id="cart-icon">
+                <i class='bx bx-cart'></i>
+                <span id="cart-count">0</span>
+            </a>
+            <!-- Icône du menu -->
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+        
+    </header>
+
+    <h1>FASHION C<span style="font-size: 1.5em;"><i class="fas fa-female"></i></span>LICK</h1>
+   
+
+    <div class="main-container">
+        <!-- Grille des produits -->
+     
+        <div class="product-grid">
+            <!-- Produit 1 -->
+            <div class="product">
+                <img src="image1.jfif" alt="Produit 1">
+                <h3>Robe Femme</h3>
+                <p class="price">20 €</p>
+                <div class="quantity">
+                    <label for="quantity1">Quantité:</label>
+                    <input type="number" id="quantity1" value="1" min="1" onchange="updateTotal()">
+                </div>
+                <button onclick="addToCart('Robe Femme', 20, 'quantity1')">Ajouter au Panier</button>
+            </div>
+
+            <!-- Produit 2 -->
+            <div class="product">
+                <img src="image2.jfif" alt="Produit 2">
+                <h3>Veste Femme</h3>
+                <p class="price">35 €</p>
+                <div class="quantity">
+                    <label for="quantity2">Quantité:</label>
+                    <input type="number" id="quantity2" value="1" min="1" onchange="updateTotal()">
+                </div>
+                <button onclick="addToCart('Veste Femme', 35, 'quantity2')">Ajouter au Panier</button>
+            </div>
+
+            <!-- Produit 3 -->
+            <div class="product">
+                <img src="image3.jfif" alt="Produit 3">
+                <h3>T-shirt Femme</h3>
+                <p class="price">20 €</p>
+                <div class="quantity">
+                    <label for="quantity3">Quantité:</label>
+                    <input type="number" id="quantity3" value="1" min="1" onchange="updateTotal()">
+                </div>
+                <button onclick="addToCart('T-shirt Femme', 20, 'quantity3')">Ajouter au Panier</button>
+            </div> 
+
+            <!-- Produit 4 -->
+            <div class="product">
+                <img src="image4.jfif" alt="Produit 4">
+                <h3>Chaussure Femme</h3>
+                <p class="price">35 €</p>
+                <div class="quantity">
+                    <label for="quantity4">Quantité:</label>
+                    <input type="number" id="quantity4" value="1" min="1" onchange="updateTotal()">
+                </div>
+                <button onclick="addToCart('Chaussure Femme', 35, 'quantity4')">Ajouter au Panier</button>
+            </div>
+
+            <!-- Produit 5 -->
+            <div class="product">
+                <img src="image5.jfif" alt="Produit 5">
+                <h3>Pantalon Femme</h3>
+                <p class="price">40 €</p>
+                <div class="quantity">
+                    <label for="quantity5">Quantité:</label>
+                    <input type="number" id="quantity5" value="1" min="1" onchange="updateTotal()">
+                </div>
+                <button onclick="addToCart('Pantalon Femme', 40, 'quantity5')">Ajouter au Panier</button>
+            </div>   
+
+            <!-- Produit 6 -->
+            <div class="product">
+                <img src="image11.jpg" alt="Produit 6">
+                <h3>Jupe Femme</h3>
+                <p class="price">35 €</p>
+                <div class="quantity">
+                    <label for="quantity6">Quantité:</label>
+                    <input type="number" id="quantity6" value="1" min="1" onchange="updateTotal()">
+                </div>
+                <button onclick="addToCart('Jupe Femme', 35, 'quantity6')">Ajouter au Panier</button>
+            </div> 
+
+            <!-- Produit 7 -->
+            <div class="product">
+                <img src="image6.jfif" alt="Produit 7">
+                <h3>Pantalon Homme</h3>
+                <p class="price">40€</p>
+                <div class="quantity">
+                    <label for="quantity7">Quantité:</label>
+                    <input type="number" id="quantity7" value="1" min="1" onchange="updateTotal()">
+                </div>
+                <button onclick="addToCart('Pantalon Homme', 40, 'quantity7')">Ajouter au Panier</button>
+            </div>
+
+            <!-- Produit 8 -->
+            <div class="product">
+                <img src="image7.jpg" alt="Produit 8">
+                <h3>Veste Homme</h3>
+                <p class="price">50 €</p>
+                <div class="quantity">
+                    <label for="quantity8">Quantité:</label>
+                    <input type="number" id="quantity8" value="1" min="1" onchange="updateTotal()">
+                </div>
+                <button onclick="addToCart('Veste Homme', 50, 'quantity8')">Ajouter au Panier</button>
+            </div>
+
+            <!-- Produit 9 -->
+            <div class="product">
+                <img src="image8.jpg" alt="Produit 9">
+                <h3>T-shirt Homme</h3>
+                <p class="price">20 €</p>
+                <div class="quantity">
+                    <label for="quantity9">Quantité:</label>
+                    <input type="number" id="quantity9" value="1" min="1" onchange="updateTotal()">
+                </div>
+                <button onclick="addToCart('T-shirt Homme', 20, 'quantity9')">Ajouter au Panier</button>
+            </div>
+
+            <!-- Produit 10 -->
+            <div class="product">
+                <img src="escarpins-femme-bout-pointu-ferme-talon-haut-aigui.webp" alt="Produit 10">
+                <h3>escarpin femme </h3>
+                <p class="price">20 €</p>
+                <div class="quantity">
+                    <label for="quantity10">Quantité:</label>
+                    <input type="number" id="quantity10" value="10" min="1" onchange="updateTotal()">
+                </div>
+                <button onclick="addToCart('Escarpin Femme', 20, 'quantity10')">Ajouter au Panier</button>
+            </div>
+
+            <!-- Produit 11 -->
+            <div class="product">
+                <img src="image10.jfif" alt="Produit 11">
+                <h3>Survette Homme</h3>
+                <p class="price">25 €</p>
+                <div class="quantity">
+                    <label for="quantity11">Quantité:</label>
+                    <input type="number" id="quantity11" value="1" min="1" onchange="updateTotal()">
+                </div>
+                <button onclick="addToCart('Survette Homme', 25, 'quantity11')">Ajouter au Panier</button>
+            </div>
+
+            <!-- Produit 12 -->
+            <div class="product">
+                <img src="image12.jpg" alt="Produit 12">
+                <h3>Short Homme</h3>
+                <p class="price">10 €</p>
+                <div class="quantity">
+                    <label for="quantity12">Quantité:</label>
+                    <input type="number" id="quantity12" value="1" min="1" onchange="updateTotal()">
+                </div>
+                <button onclick="addToCart('Short Homme', 10, 'quantity12')">Ajouter au Panier</button>
+            </div>
+            <!-- Produit 13 -->
+ <div class="product">
+    <img src="survette enfant.jfif" alt="Produit 13">
+    <h3>Survette enfants </h3>
+    <p class="price">30€</p>
+    <div class="quantity">
+        <label for="quantity13">Quantité:</label>
+        <input type="number" id="quantity13" value="1" min="1" onchange="updateTotal()">
+    </div>
+    <button onclick="addToCart('Survette Enfant', 30, 'quantity13')">Ajouter au Panier</button>
+</div>
+ <!-- Produit 14 -->
+ <div class="product">
+    <img src="JOGGING ENFANT.jfif" alt="Produit 14">
+    <h3> jogging enfant</h3>
+    <p class="price">20 €</p>
+    <div class="quantity">
+        <label for="quantity14">Quantité:</label>
+        <input type="number" id="quantity14" value="1" min="1" onchange="updateTotal()">
+    </div>
+    <button onclick="addToCart('Jogging Enfant', 20, 'quantity14')">Ajouter au Panier</button>
+</div>
+ <!-- Produit 15 -->
+ <div class="product">
+    <img src="JEAN ENFANT.jpg" alt="Produit 15">
+    <h3>jean enfant </h3>
+    <p class="price">20 €</p>
+    <div class="quantity">
+        <label for="quantity15">Quantité:</label>
+        <input type="number" id="quantity15" value="1" min="1" onchange="updateTotal()">
+    </div>
+    <button onclick="addToCart('Jean Enfant', 20, 'quantity15')">Ajouter au Panier</button>
+</div>
+        </div>
+ 
+        <!-- Options de paiement -->
+        <div class="payment-options">
+            <u> <h3>Options de paiement:</h3> </u>
+            <label>
+                <input type="radio" name="payment" value="Carte de crédit" id="credit-card"> Carte de crédit
+            </label><br>
+            <label>
+                <input type="radio" name="payment" value="PayPal" id="paypal"> PayPal
+            </label><br>
+            <label>
+                <input type="radio" name="payment" value="Virement bancaire" id="bank-transfer"> Virement bancaire
+            </label>
+        </div>
+
+        <!-- Formulaire de coordonnées -->
+        <section id="delivery-form-container">
+            <h2>Formulaire de coordonnées</h2>
+            <form id="delivery-form">
+                <label for="first-name">Prénom :</label>
+                <input type="text" id="first-name" name="first-name" required><br>
+                <label for="last-name">Nom :</label>
+                <input type="text" id="last-name" name="last-name" required><br>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="address">Adresse :</label>
+                <textarea id="address" name="address" required></textarea><br>
+                <button type="submit">Valider la commande</button>
+            </form>
+        </section>
+    </div>
+<script src="pagecommande.js"></script>
+</body>
+</html>

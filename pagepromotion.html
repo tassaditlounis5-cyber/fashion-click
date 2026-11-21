@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotions - Mini Site E-commerce</title>
+    <link rel="stylesheet" href="pagepromotion.css">
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="FASHION.png" alt="Logo du magasin">
+        </a>
+        <ul class="navmenu">
+            <li><a href="pageaccueil.html">Accueil</a></li>
+            <li><a href="pageaccueil.html#boutique">Boutique</a></li>
+            <li><a href="pageaccueil.html#trending">Produits</a></li>
+            <li><a href="pagepromotion.html"> promotions</a></li>
+            <li><a href="pagecommande.html"> commander </a></li>
+            <li><a href="pageauthentification.html">Authentification </a></li>
+            <li><a href="pageinscription.html">inscription </a></li>
+        </ul>
+        <div class="nav-icon">
+            <a href="#"><i class='bx bx-search'></i></a>
+            <a href="#"><i class='bx bx-user'></i></a>
+            <a href="#" id="cart-icon">
+                <i class='bx bx-cart'></i>
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+    
+    
+    
+
+    <div class="banner">
+        <h1>Soldes d'Hiver : Jusqu'à -50 % !</h1>
+        <p>Offres valables jusqu'au 31 Mars 2025 !</p>
+    </div> 
+
+    <div class="promo-code-section">
+        <h2> <u>Entrez un code promo:</u> </h2>
+        <input type="text" id="promoCodeInput" placeholder="Saisir le code promo">
+        <button onclick="applyPromoCode()">Appliquer</button>
+        <p id="promoMessage"></p>
+    </div>
+<br> 
+<br> 
+<br>
+<br> 
+    <!-- Promotions Femme -->
+    <div class="category-title">
+        <h2>Promotions Femme</h2>
+    </div>
+    <div class="product-grid">
+        <div class="product">
+            <a href="#"><img src="image1.jfif" alt="Robes Femme"></a>
+            <h3>Robes Femme</h3>
+            <p>Avant : <span class="old-price">60 €</span></p>
+            <p>Après : <span class="new-price">30 €</span> (-50%)</p>
+            <button>Ajouter au Panier</button> 
+        </div>
+        <div class="product">
+            <a href="#"><img src="jogging femme.jfif" alt="jogging Femme"></a>
+            <h3>ensemble jogging</h3>
+            <p>Avant : <span class="old-price">60 €</span></p>
+            <p>Après : <span class="new-price">30 €</span> (-50%)</p>
+            <button>Ajouter au Panier</button> 
+        </div>
+        <div class="product">
+            <a href="#"><img src="manteau femme.jpg" alt="Manteau "></a>
+            <h3>Manteau </h3>
+            <p>Avant : <span class="old-price">60 €</span></p>
+            <p>Après : <span class="new-price">30 €</span> (-50%)</p>
+            <button>Ajouter au Panier</button> 
+        </div>
+        <div class="product">
+            <a href="#"><img src="image2.jfif" alt="Veste Femme"></a>
+            <h3>Veste Femme</h3>
+            <p>Avant : <span class="old-price">35 €</span></p>
+            <p>Après : <span class="new-price">25 €</span> (-29%)</p>
+            <button>Ajouter au Panier</button>
+        </div>
+        <div class="product">
+            <a href="#"><img src="images (5).jfif" alt="Veste blazer Femme"></a>
+            <h3>Veste Femme</h3>
+            <p>Avant : <span class="old-price">35 €</span></p>
+            <p>Après : <span class="new-price">25 €</span> (-29%)</p>
+            <button>Ajouter au Panier</button>
+        </div>
+        <div class="product">
+            <a href="#"><img src="images (3).jfif" alt="bottes Femme"></a>
+            <h3>Veste Femme</h3>
+            <p>Avant : <span class="old-price">45 €</span></p>
+            <p>Après : <span class="new-price">25 €</span> (-29%)</p>
+            <button>Ajouter au Panier</button>
+        </div>
+        <div class="product">
+            <a href="#"><img src="images (4).jfif" alt="Pantalon Femme"></a>
+            <h3>Pantalon Femme</h3>
+            <p>Avant : <span class="old-price">30 €</span></p>
+            <p>Après : <span class="new-price">15 €</span> (-50%)</p>
+            <button>Ajouter au Panier</button>
+        </div>
+        <div class="product">
+            <a href="#"><img src="image13.jfif" alt="Manteau Femme"></a>
+            <h3>Manteau Femme</h3>
+            <p>Avant : <span class="old-price">45 €</span></p>
+            <p>Après : <span class="new-price">35 €</span> (-22%)</p>
+            <button>Ajouter au Panier</button>
+        </div> 
+
+        <div class="product">
+            <a href="#"><img src="image14.jfif" alt="Demi-Bottes Femme"></a>
+            <h3>Demi-Bottes Femme</h3>
+            <p>Avant : <span class="old-price">25 €</span></p>
+            <p>Après : <span class="new-price">15 €</span> (-40%)</p>
+            <button>Ajouter au Panier</button>
+        </div> 
+
+        <div class="product">
+            <a href="#"><img src="image15.jfif" alt="Pull Femme"></a>
+            <h3>Pull Femme</h3>
+            <p>Avant : <span class="old-price">35 €</span></p>
+            <p>Après : <span class="new-price">20 €</span> (-43%)</p>
+            <button>Ajouter au Panier</button>
+        </div> 
+
+    </div>
+<br> 
+<br> 
+<br> 
+    <!-- Promotions Homme -->
+    <div class="category-title">
+        <h2>Promotions Homme</h2>
+    </div>
+    <div class="product-grid">
+        <div class="product">
+            <a href="#"><img src="image6.jfif" alt="Pantalon Homme"></a>
+            <h3>Pantalon Homme</h3>
+            <p>Avant : <span class="old-price">40 €</span></p>
+            <p>Après : <span class="new-price">20 €</span> (-50%)</p>
+            <button>Ajouter au Panier</button>
+        </div>
+        <div class="product">
+            <a href="#"><img src="veste-chauffante-homme-usb-chauffante-electrique.webp" alt="veste chauffante"></a>
+            <h3>veste chauffante Homme</h3>
+            <p>Avant : <span class="old-price">60 €</span></p>
+            <p>Après : <span class="new-price">30 €</span> (-50%)</p>
+            <button>Ajouter au Panier</button>
+        </div>
+        <div class="product">
+            <a href="#"><img src="image7.jpg" alt="Veste Homme"></a>
+            <h3>Veste Homme</h3>
+            <p>Avant : <span class="old-price">40 €</span></p>
+            <p>Après : <span class="new-price">28 €</span> (-30%)</p>
+            <button>Ajouter au Panier</button>
+        </div>
+        <div class="product">
+            <a href="#"><img src="images (6).jfif" alt="Manteau Homme"></a>
+            <h3>manteau Homme</h3>
+            <p>Avant : <span class="old-price">40 €</span></p>
+            <p>Après : <span class="new-price">28 €</span> (-30%)</p>
+            <button>Ajouter au Panier</button>
+        </div>
+        <div class="product">
+            <a href="#"><img src="1.jpg" alt="basket"></a>
+            <h3>Baskets </h3>
+            <p>Avant : <span class="old-price">40 €</span></p>
+            <p>Après : <span class="new-price">28 €</span> (-30%)</p>
+            <button>Ajouter au Panier</button>
+        </div>
+        <div class="product">
+            <a href="#"><img src="doudoune.jfif" alt="doudoune"></a>
+            <h3>Doudoune Homme</h3>
+            <p>Avant : <span class="old-price">70€</span></p>
+            <p>Après : <span class="new-price">50 €</span> (-29%)</p>
+            <button>Ajouter au Panier</button>
+        </div>
+
+        <div class="product">
+            <a href="#"><img src="ensemble jogging homme.jpg" alt="ensemble jogging"></a>
+            <h3>ensemble jogging</h3>
+            <p>Avant : <span class="old-price">45 €</span></p>
+            <p>Après : <span class="new-price">30 €</span> (-33%)</p>
+            <button>Ajouter au Panier</button>
+        </div>
+
+        <div class="product">
+            <a href="#"><img src="image19.jfif" alt="Botte Homme"></a>
+            <h3>Botte</h3>
+            <p>Avant : <span class="old-price">45 €</span></p>
+            <p>Après : <span class="new-price">30 €</span> (-33%)</p>
+            <button>Ajouter au Panier</button>
+        </div>
+
+
+        <div class="product">
+            <a href="#"><img src="image17.jfif" alt="Manteau Homme"></a>
+            <h3>Manteau </h3>
+            <p>Avant : <span class="old-price">60 €</span></p>
+            <p>Après : <span class="new-price">42 €</span> (-30%)</p>
+            <button>Ajouter au Panier</button>
+        </div>
+
+
+        <div class="product">
+            <a href="#"><img src="image18.jfif" alt="Pull Homme"></a>
+            <h3>Pull </h3>
+            <p>Avant : <span class="old-price">55 €</span></p>
+            <p>Après : <span class="new-price">35 €</span> (-36%)</p>
+            <button>Ajouter au Panier</button>
+        </div>
+
+
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- Section Avis des Clients -->
+<div class="reviews-section">
+    <h3> <u>Avis des Clients </u></h3>
+   <textarea id="reviewText" rows="5" placeholder="Laissez votre avis ici..."></textarea>
+   <button onclick="submitReview()">Soumettre l'Avis</button>
+   <div id="reviewsList"></div>
+   
+</div>
+
+    <footer>
+        <p>&copy; FASHION CLICK </p>
+    </footer>
+    <script src="pagepromotion.js"></script>
+        </body>
+    </html>
